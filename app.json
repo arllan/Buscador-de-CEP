@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "projeto_buscar_cep",
-    "slug": "projeto_buscar_cep",
+    "name": "Buscar CEP",
+    "slug": "Buscar_CEP",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#4DA7C1"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,12 +21,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#4DA7C1"
+      },
+      "package": "com.arllan.projeto_buscar_cep"
     }
   }
 }
