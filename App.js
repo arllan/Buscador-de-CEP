@@ -1,8 +1,8 @@
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import BuscadorCep from './src/buscar';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import Buscar from './src/buscar';
 import Sobre from './src/sobre';
 import Resultado from './src/resultadoRequisicao';
 import  {NavigationContainer} from '@react-navigation/native';
@@ -14,10 +14,21 @@ const Drawer = createDrawerNavigator();
 
 const Stack = createStackNavigator();
 
+function DrawerCustomizado(props) {
+  return(
+      <DrawerContentScrollView {...props}>
+          <View style={{width:'100%', height:77, alignItems:'center',justifyContent:'center', marginTop:40, marginBottom:80}}>
+              <Image source={require('./assets/icon.png')} style={{width:"100%", height:200}}/>
+          </View>
+          <DrawerItemList {...props}/>
+      </DrawerContentScrollView>
+  )
+}
+
 function MenuDrawer(){
   return(
-    <Drawer.Navigator >
-      <Drawer.Screen name='BuscadorCep' component={BuscadorCep} />
+    <Drawer.Navigator drawerContent={DrawerCustomizado} >
+      <Drawer.Screen name='Buscar' component={Buscar} />
       <Drawer.Screen name='Sobre' component={Sobre} />
     </Drawer.Navigator>
   )

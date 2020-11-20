@@ -9,7 +9,7 @@ export default ({route}) => {
     const navigation = useNavigation();
 
     function menu() {
-        navigation.navigate('BuscadorCep')
+        navigation.navigate('Buscar')
     }
 
     async function abrirGoogleMaps(){ 
@@ -78,7 +78,7 @@ export default ({route}) => {
                 <AntDesign name="enviroment" size={24} color="black" onPress={abrirGoogleMaps} />
             </View>
             <View style={styles.areaBotao}>
-                <TouchableOpacity style={styles.botao} onPress={() => {navigation.navigate('BuscadorCep')}}>
+                <TouchableOpacity style={styles.botao} onPress={() => {navigation.navigate('Buscar')}}>
                     <Text style={styles.textoBotao}>Voltar</Text>
                 </TouchableOpacity>
             </View>
@@ -177,12 +177,22 @@ const styles = StyleSheet.create({
     },
     parteCep:{
         backgroundColor:'#DFEBF7',
-        width:'45%'
+        width:'45%',
+        minHeight:40,
+        height:"100%",
+        maxHeight:60,
+        justifyContent:"center",
+        alignSelf:"center"
     },
     parteTextoCep:{
         backgroundColor:'#DFEBF7',
         marginLeft:2,
-        width:'55%'
+        width:'55%',
+        minHeight:40,
+        height:"100%",
+        maxHeight:60,
+        justifyContent:"center",
+        alignSelf:"center"
     },
     corTextoResultado:{
         color:"#676C72",

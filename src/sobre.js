@@ -10,27 +10,27 @@ export default () => {
     const navigation = useNavigation();
 
     function menu() {
-        navigation.navigate('BuscadorCep')
+        navigation.navigate('Buscar')
     }
 
     return(
         <ScrollView style={styles.container}>
             <View style={styles.menu}>
                 <AntDesign name="arrowleft" size={24} color="#fff" onPress={menu} />
-                <Text style={styles.textoMenu}>Sobre...</Text>
+                <Text style={styles.textoMenu}>Sobre</Text>
             </View>
             <View style={styles.containerBuscar}>
                 <Text style={styles.textoTitulo}>
                     MasterCEP
                 </Text>
                 <Text style={styles.textoDescricao}>
-                    O masterCEP é um aplicativo desenvolvido por Arllan Pablo, que tem por objetivo facilitar a vida das pessoas que, por algum motivo (seja ele o trabalho ou bessecidade instantânea), deseja descobrir o CEP e/ou enredeço de um determinado local.
+                    O masterCEP é um aplicativo desenvolvido por Arllan Pablo, que tem por objetivo facilitar a vida das pessoas que, por algum motivo (seja ele o trabalho ou necessidade instantânea), deseja descobrir o CEP e/ou enredeço de um determinado local.
                 </Text>
                 <Text style={styles.textoDescricao}>
-                    De uma maneira bastante rápida e simples, você encontra qualquer endereço e/ou CEP a part de uma busca rápida.
+                    De uma maneira bastante rápida e simples, você encontra qualquer CEP a partir de uma busca rápida.
                 </Text>
                 <Text style={styles.textoDescricao}>
-                    Caso possua alguma dúvida, sugestão ou critica, fale conosco através do email.
+                    Caso possua alguma dúvida, sugestão ou crítica, fale conosco através do email.
                 </Text>
                 <Text style={styles.textoEmail} onPress={() => Linking.openURL('mailto:arllanpablo@gmail.com?subject=Aplicativo&body=escreva aqui')}>
                     arllanpablo@gmail.com

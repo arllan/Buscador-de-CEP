@@ -170,7 +170,8 @@ const styles = StyleSheet.create({
         marginTop:15,
         marginBottom: 15,
         color:"#fff",
-        fontSize:17
+        fontSize:17,
+        
     },
     envoltaTextInput:{
         backgroundColor:'red',
